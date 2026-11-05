@@ -1,15 +1,15 @@
 # PMOHub for macOS
 
-PMOHub 原版界面的 Apple Silicon macOS 适配版。本仓库只发布可下载的二进制安装包和说明，不上传源码。
+PMOHub 原版的 Apple Silicon macOS 适配版，界面已按原生 macOS 方向重新对齐。本仓库只发布可下载的二进制安装包和说明，不上传源码。
 
 ## 下载
 
 ### Rainy75 无光版有线适配
 
-前往 [Rainy75 Release](https://github.com/CClishan/PMOHub-Mac/releases/tag/rainy75-v2.1.1-macos-arm64) 下载：
+前往 [Rainy75 原生 Mac UI Release](https://github.com/CClishan/PMOHub-Mac/releases/tag/rainy75-v2.1.1-macos-arm64-ui) 下载：
 
-- `PMOHub-Rainy75-macOS-arm64-2.1.1.dmg`
-- `PMOHub-Rainy75-macOS-arm64-2.1.1.dmg.sha256`
+- `PMOHub-Rainy75-macOS-arm64-2.1.1-ui.dmg`
+- `PMOHub-Rainy75-macOS-arm64-2.1.1-ui.dmg.sha256`
 
 ### Aurora 80 / PMOHUB 固件
 
@@ -32,9 +32,13 @@ PMOHub 原版界面的 Apple Silicon macOS 适配版。本仓库只发布可下�
 - 4 层键位读取。
 - 单键改键：标准层和 Fn1 层均已实机验证，写入后可回读并恢复原值。
 - 原生 macOS 窗控、应用菜单、`Command+,` 设置和 `Command+W` 关闭窗口。
+- 设备中心、设备详情、设置页和关于页统一为原生 macOS 视觉方向。
+- 主页、设置页和关于页使用居中的 macOS 标题栏，语言与主题控件靠右。
+- 新安装默认浅色模式，已有深色偏好继续保留。
 - 深色 / 浅色模式，主窗口、设置页和关于页同步切换。
+- 关于页移除版本号，所有页面去除原版紫色视觉。
+- 设备页补齐固定页脚，保留指定版权文案。
 - Aurora 80 / PMOHUB 固件设备继续保留在设备中心。
-- 页脚保留：`PMOHub 版权所有，一切基于原版改造，仅适配 MacOS。`
 
 ## 适配方式
 
@@ -42,6 +46,7 @@ PMOHub 原版界面的 Apple Silicon macOS 适配版。本仓库只发布可下�
 - 排除 Windows 专用原生模块，设备通讯继续使用 WebHID。
 - 补充 macOS Bundle 信息、图标及 HID / 输入监控权限说明，并执行 ad-hoc 签名。
 - 调整窗口、菜单、快捷键、滚动条、焦点环和减少动画行为，使其接近原生 macOS 交互。
+- 基于原版 DOM 增加 macOS 兼容层，重做设备中心、双栏设备详情、设置页和关于页。
 - 增加跨窗口深浅主题同步，修复设置页和关于页的主题加载异常。
 - 为 Rainy 75 增加 VIA 路由、`8 x 16` 矩阵、4 层读取和单键写入处理，补充 QMK 键名映射。
 - macOS 上关闭 Windows `.exe` 自动更新检查，改为提示从 GitHub Releases 手动下载。
@@ -68,10 +73,10 @@ PMOHub 原版界面的 Apple Silicon macOS 适配版。本仓库只发布可下�
 
 ## 校验
 
-Rainy75 版 DMG SHA-256：
+Rainy75 原生 Mac UI 版 DMG SHA-256：
 
 ```text
-1ece0aed9bd3a07bb80837af7c2f9e4d50bcd77fff074f2f5264e9f5f28e7b33
+40f8e3200da0a5734eec6026b15f38341c840f1248b109ddfc6aa8c16ae90ac8
 ```
 
 Aurora 80 版 DMG SHA-256：
@@ -83,7 +88,7 @@ Aurora 80 版 DMG SHA-256：
 请只从本仓库 Release 下载，并在终端核对：
 
 ```bash
-shasum -a 256 PMOHub-Rainy75-macOS-arm64-2.1.1.dmg
+shasum -a 256 PMOHub-Rainy75-macOS-arm64-2.1.1-ui.dmg
 ```
 
 ## 版权
