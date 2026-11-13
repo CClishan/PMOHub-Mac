@@ -4,12 +4,12 @@ PMOHub 原版界面的 Apple Silicon macOS 适配版。本仓库只发布可下�
 
 ## 下载
 
-### Rainy75 无光版有线适配
+### Rainy75 无光版有线适配（v22 UI 统一版）
 
-前往 [Rainy75 Release](https://github.com/CClishan/PMOHub-Mac/releases/tag/rainy75-v2.1.1-macos-arm64) 下载：
+前往 [Rainy75 v22 Release](https://github.com/CClishan/PMOHub-Mac/releases/tag/rainy75-v2.1.1-macos-arm64-ui-v22) 下载：
 
-- `PMOHub-Rainy75-macOS-arm64-2.1.1.dmg`
-- `PMOHub-Rainy75-macOS-arm64-2.1.1.dmg.sha256`
+- `PMOHub-Rainy75-macOS-arm64-2.1.1-v22.dmg`
+- `PMOHub-Rainy75-macOS-arm64-2.1.1-v22.dmg.sha256`
 
 ### Aurora 80 / PMOHUB 固件
 
@@ -20,9 +20,9 @@ PMOHub 原版界面的 Apple Silicon macOS 适配版。本仓库只发布可下�
 
 ## 安装
 
-1. 打开 DMG，将 `PMOHub.app` 拖入“应用程序”。
-2. 首次启动若被 macOS 拦截，在“应用程序”中右键 `PMOHub`，选择“打开”，再确认“打开”。
-3. 也可以前往“系统设置 > 隐私与安全性”，点击“仍要打开”。
+1. 打开 DMG，将 `PMOHub.app` 拖入"应用程序"。
+2. 首次启动若被 macOS 拦截，在"应用程序"中右键 `PMOHub`，选择"打开"，再确认"打开"。
+3. 也可以前往"系统设置 > 隐私与安全性"，点击"仍要打开"。
 4. 首次连接键盘时，允许应用访问 HID / 输入监控，并重新插拔键盘。
 
 ## Rainy75 功能
@@ -33,6 +33,10 @@ PMOHub 原版界面的 Apple Silicon macOS 适配版。本仓库只发布可下�
 - 单键改键：标准层和 Fn1 层均已实机验证，写入后可回读并恢复原值。
 - 原生 macOS 窗控、应用菜单、`Command+,` 设置和 `Command+W` 关闭窗口。
 - 深色 / 浅色模式，主窗口、设置页和关于页同步切换。
+- 设备页原生 macOS 布局：窄侧栏、紧凑设备卡片、1100px 居中内容列。
+- 按键设置：浅灰渐变键帽 + 白色键位底板，右侧小键盘同步浅灰。
+- 灯光管理：87 键 keycap 实时灯光预览，支持常亮/呼吸/五彩缤纷/流光溢彩等效果。
+- 宏管理、配置管理、键盘设置：统一 32px 胶囊按钮、系统蓝主按钮、卡片式布局。
 - Aurora 80 / PMOHUB 固件设备继续保留在设备中心。
 - 页脚保留：`PMOHub 版权所有，一切基于原版改造，仅适配 MacOS。`
 
@@ -45,6 +49,7 @@ PMOHub 原版界面的 Apple Silicon macOS 适配版。本仓库只发布可下�
 - 增加跨窗口深浅主题同步，修复设置页和关于页的主题加载异常。
 - 为 Rainy 75 增加 VIA 路由、`8 x 16` 矩阵、4 层读取和单键写入处理，补充 QMK 键名映射。
 - macOS 上关闭 Windows `.exe` 自动更新检查，改为提示从 GitHub Releases 手动下载。
+- v22：统一操作区版式和控件样式，修复 React 重渲染后样式丢失问题。
 
 本适配基于原版二进制和界面通讯层改造，没有上游源码，也没有重写或刷入 Rainy 75 固件。
 
@@ -68,10 +73,10 @@ PMOHub 原版界面的 Apple Silicon macOS 适配版。本仓库只发布可下�
 
 ## 校验
 
-Rainy75 版 DMG SHA-256：
+Rainy75 v22 版 DMG SHA-256：
 
 ```text
-1ece0aed9bd3a07bb80837af7c2f9e4d50bcd77fff074f2f5264e9f5f28e7b33
+ab46eafce57815f3d3d13684a1a5f32ae72d32f573107c40195faf0a84242a93
 ```
 
 Aurora 80 版 DMG SHA-256：
@@ -83,7 +88,7 @@ Aurora 80 版 DMG SHA-256：
 请只从本仓库 Release 下载，并在终端核对：
 
 ```bash
-shasum -a 256 PMOHub-Rainy75-macOS-arm64-2.1.1.dmg
+shasum -a 256 PMOHub-Rainy75-macOS-arm64-2.1.1-v22.dmg
 ```
 
 ## 版权
